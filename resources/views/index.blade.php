@@ -57,17 +57,16 @@
     <div class="filter"></div>
     <div class="content-center">
         <div class="container">
-            <div class="title-brand">
-                <h1 class="presentation-title">Dice相册</h1>
-                <div class="fog-low">
-                    <img src="{{ asset('/assets/img/fog-low.png') }}" alt="">
-                </div>
-                <div class="fog-low right">
-                    <img src="{{ asset('/assets/img/fog-low.png') }}" alt="">
-                </div>
-            </div>
-            <h2 class="presentation-subtitle text-center">假如人生是一场游戏</h2>
-            <h2 class="presentation-subtitle text-center">你会选择什么样的角色呢</h2>
+            {{--<div class="title-brand">--}}
+                {{--<div class="fog-low">--}}
+                    {{--<img src="{{ asset('/assets/img/fog-low.png') }}" alt="">--}}
+                {{--</div>--}}
+                {{--<div class="fog-low right">--}}
+                    {{--<img src="{{ asset('/assets/img/fog-low.png') }}" alt="">--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<h2 class="presentation-subtitle text-center">假如人生是一场游戏</h2>--}}
+            {{--<h2 class="presentation-subtitle text-center">你会选择什么样的角色呢</h2>--}}
         </div>
     </div>
     <div class="moving-clouds" style="background-image: url('{{ asset('/assets/img/clouds.png') }}'); "></div>
