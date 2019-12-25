@@ -64,9 +64,9 @@ class PhotoController extends CommonController
             if (!intval($id)) $this->throwExp(500, '参数错误');
 
             $query = Photo::query();
-            $total = $query->count();
-
             $query = $query->where('photo_album', $id);
+
+            $total = $query->count();
             $cur_page   = $this->params['cur_page'] ?? 1;
             $page_size  = 16;
 
