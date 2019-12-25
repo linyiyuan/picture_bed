@@ -82,4 +82,9 @@ class PhotoController extends CommonController
             return $this->errorExp($e);
         }
     }
+
+    public function getPersonal()
+    {
+        return view('personal');
+    }
 }

@@ -22,6 +22,8 @@ Route::group(['namespace' => 'Web'],function(){
         Route::get('/photo_list','PhotoController@getPhotoAlbumList');
         //相册详情页
         Route::get('/photo_detail/{id}','PhotoController@getPhotoList');
+        //个人信息
+        Route::get('/personal','PhotoController@getPersonal');
 
     });
 });
