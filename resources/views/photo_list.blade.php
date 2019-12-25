@@ -34,51 +34,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="pagination-area">
-                    <ul class="pagination pagination-primary pagination-no-border justify-content-center">
-                        <li class="page-item">
-                            <a href="#paper-kit" class="page-link"><i class="fa fa-angle-double-left"
-                                                                      aria-hidden="true"></i></a>
-                        </li>
-                        <li class="page-item active">
-                            <a href="#paper-kit" class="page-link">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">1</font>
-                                </font>
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a href="#paper-kit" class="page-link">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">2</font>
-                                </font>
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a href="#paper-kit" class="page-link">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">3</font>
-                                </font>
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a href="#paper-kit" class="page-link">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">4</font>
-                                </font>
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a href="#paper-kit" class="page-link">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">5</font>
-                                </font>
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a href="#paper-kit" class="page-link"><i class="fa fa-angle-double-right"
-                                                                      aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
+                    {!! $pageShow !!}
                 </div>
             </div>
         </div>
