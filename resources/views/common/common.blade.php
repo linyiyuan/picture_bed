@@ -8,7 +8,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <div class="navbar-translate">
-                <a class="navbar-brand" href="index.html" rel="tooltip" title="Coded by Creative Tim"
+                <a class="navbar-brand" href="/" rel="tooltip" title="Coded by Creative Tim"
                    data-placement="bottom" target="_blank">
                     Shmily的相册
                 </a>

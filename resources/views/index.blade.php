@@ -53,7 +53,7 @@
     </div>
 </nav>
 <!-- 导航栏结束 -->
-<div class="page-header section-dark" style="background-image: url('{{ asset('/assets/img/loading.jpg') }}')">
+<div class="page-header section-dark" style="background-image: url('https://shmily-album.oss-cn-shenzhen.aliyuncs.com/system_image/2160x1920_DICE_08.jpg')">
     <div class="filter"></div>
     <div class="content-center">
         <div class="container">
