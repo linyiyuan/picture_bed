@@ -24,6 +24,7 @@ Route::group(['namespace' => 'Web'],function(){
         Route::get('/photo_detail/{id}','PhotoController@getPhotoList');
         //个人信息
         Route::get('/personal','PhotoController@getPersonal');
+        Route::get('/test','PhotoController@test');
 
     });
 });

@@ -87,4 +87,9 @@ class PhotoController extends CommonController
     {
         return view('personal');
     }
+
+    public function test()
+    {
+        return view('test');
+    }
 }
