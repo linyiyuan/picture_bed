@@ -8,7 +8,7 @@
 
 ### 1.2 注意事项
 该系统只是相册展示系统，后台系统由![Vue-admin-template](https://github.com/linyiyuan/vue-admin-template) + ![Laravel-admin-template](https://github.com/linyiyuan/laravel-admin-template) 控制，
-你可以根据自己选择，重新新建一个后台，或者是使用作者提供的这套前后端分离后台。
+你可以根据自己选择，重新新建一个后台，或者是使用作者提供的这套前后端分离后台。前端页面是由[qqphp-com](https://github.com/qqphp-com) 所提供，在此特别感谢
 
 该系统的照片目前是全开放状态，不带有任何保密效果，请勿上传私密以及带有隐私的照片
 
@@ -74,41 +74,15 @@
 
 ## 项目展示
 
+![相册主页](https://shmily-album.oss-cn-shenzhen.aliyuncs.com/photo_album_9/06e45d780c22b1818f38f35ffe1b9d10.jpg)
 
+![相册列表](https://shmily-album.oss-cn-shenzhen.aliyuncs.com/photo_album_9/f897b405e0b1955aa58f5bd3ef9be31e.png.png)
 
+![图片列表页](https://shmily-album.oss-cn-shenzhen.aliyuncs.com/photo_album_9/c37a55e8586dbc059550f6960c7f009a.jpg)
 
-#### 2.2.3 Nginx配置参考
-	
-	server {
-    listen 80;
-    server_name 项目域名;
-    root 项目路径;
-    index index.php index.html index.htm;
-    
-		 location / {
-		        #add_header 'Access-Control-Allow-Origin' 'http://manager2.web';
-		         if (!-e $request_filename){
-		            rewrite  ^/(.*)$  /index.php?s=$1  last;
-		        }
-		   }
+![图片列表页](https://shmily-album.oss-cn-shenzhen.aliyuncs.com/photo_album_9/81ca6c9a2f40659b1e650f47530670fe.jpg)
 
+![图片详情页](https://shmily-album.oss-cn-shenzhen.aliyuncs.com/photo_album_9/1f8cb5ba592b3a230fc4e5801775bcc7.jpg)
 
-		    # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
-		    location ~ \.php$ {
-		        #include snippets/fastcgi-php.conf;
+![个人信息页](https://shmily-album.oss-cn-shenzhen.aliyuncs.com/photo_album_9/dfae36e2bea944e7d6a8a21ae84f8f7a.png.png)
 
-			root 项目路径;
-		 		# With php7.0-cgi alone:
-		 		fastcgi_pass 127.0.0.1:9000;
-				proxy_read_timeout 300;
-				fastcgi_read_timeout 600;
-				## With php7.0-fpm:
-				#fastcgi_pass unix:/run/php/php7.1-fpm.sock;
-				fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
-			    include        fastcgi_params;
-		    }
-
-		    location ~ /\.ht {
-		        deny all;
-		    }
-		}
