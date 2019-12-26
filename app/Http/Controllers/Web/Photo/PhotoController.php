@@ -40,8 +40,7 @@ class PhotoController extends CommonController
             $offset = ($cur_page- 1) * $page_size;
             $query = $query->offset($offset)->limit($page_size);
 
-            $list = $query->get()->toArray();
-
+            $list = $query->where('album_status', 1)->get()->toArray();
 
             return view('photo_list', [
                 'list' => $list,
