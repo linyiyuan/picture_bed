@@ -230,7 +230,7 @@ function loadModel(modelId, modelTexturesId){
     if (modelTexturesId === undefined) modelTexturesId = 0;
     localStorage.setItem('modelTexturesId', modelTexturesId);
 
-    loadlive2d('live2d', 'live2d_api/get/?id='+modelId+'-'+modelTexturesId, console.log('live2d','模型 '+modelId+'-'+modelTexturesId+' 加载完成'));
+    loadlive2d('live2d', '/live2d_api/get/?id='+modelId+'-'+modelTexturesId, console.log('live2d','模型 '+modelId+'-'+modelTexturesId+' 加载完成'));
 }
 
 function loadRandModel(){
@@ -241,7 +241,7 @@ function loadRandModel(){
     var modelTexturesRandMode = 'rand';     // 可选 'rand'(随机), 'switch'(顺序)
     $.ajax({
         cache: false,
-        url: 'live2d_api/'+modelTexturesRandMode+'_textures/?id='+modelId+'-'+modelTexturesId,
+        url: '/live2d_api/'+modelTexturesRandMode+'_textures/?id='+modelId+'-'+modelTexturesId,
         dataType: "json",
         success: function (result){
             if (result.textures['id'] == 1 && (modelTexturesId == 1 || modelTexturesId == 0)) {
@@ -262,7 +262,7 @@ function loadOtherModel(){
 
     $.ajax({
         cache: false,
-        url: 'live2d_api/'+modelTexturesRandMode+'/?id='+modelId,
+        url: '/live2d_api/'+modelTexturesRandMode+'/?id='+modelId,
         dataType: "json",
         success: function (result){
             loadModel(result.model['id']);
