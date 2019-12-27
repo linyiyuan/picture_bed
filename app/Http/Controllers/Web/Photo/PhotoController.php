@@ -60,11 +60,20 @@ class PhotoController extends CommonController
     public function getPhotoList($id)
     {
         try {
-            if (!intval($id)) $this->throwExp(500, '参数错误');
+            if (!intval($id)) return redirect('/photo_list')->with('message',['code' => 400, 'message' => '参数错误']);
 
             $query = Photo::query();
-            $query = $query->where('photo_album', $id);
 
+            $photoAlbum = PhotoAlbum::query()->where('id', $id)->first();
+            if (empty($photoAlbum)) return redirect('/photo_list')->with('message',['code' => 400, 'message' => '该相册不存在']);
+
+            //密码校验
+            if ($photoAlbum['album_type'] == 2) {
+                $answer = $this->params['answer'] ?? '';
+                if ($answer != $photoAlbum['album_answer']) return redirect('/photo_list')->with('message',['code' => 400, 'message' => '输入密码错误']);
+            }
+
+            $query = $query->where('photo_album', $id);
             $total = $query->count();
             $cur_page   = $this->params['cur_page'] ?? 1;
             $page_size  = 16;
