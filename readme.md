@@ -7,10 +7,10 @@
 该项目是使用了Laravel5.6 + bootstrap4.0开发的一个相册系统，其中图像资源存储于阿里云对象储存中，本项目的初衷是为了更方便的管理自己经常使用的一些照片，利用该系统能够将照片上传至阿里云上，方便我们更好的管理自己的照片
 
 ### 1.2 注意事项
-该系统只是相册展示系统，后台系统由![Vue-admin-template](https://github.com/linyiyuan/vue-admin-template) + ![Laravel-admin-template](https://github.com/linyiyuan/laravel-admin-template) 控制，
-你可以根据自己选择，重新新建一个后台，或者是使用作者提供的这套前后端分离后台。前端页面是由[qqphp-com](https://github.com/qqphp-com) 所提供，在此特别感谢
+该系统只是相册前端展示系统，不包含后台系统， 后台系统由[Vue-admin-template](https://github.com/linyiyuan/vue-admin-template) + [Laravel-admin-template](https://github.com/linyiyuan/laravel-admin-template) 的图传模块控制，
+你可以根据自己选择，自己编写后台系统  前端页面均由[qqphp-com](https://github.com/qqphp-com) 所提供，在此特别感谢
 
-该系统的照片目前是全开放状态，不带有任何保密效果，请勿上传私密以及带有隐私的照片
+该系统的照片是全开放状态，不带有任何保密效果，请勿上传私密以及带有隐私的照片
 
 ## 2 如何部署
 ### 2.1 开发说明
@@ -71,10 +71,9 @@
 
 <br>
 
-
 ## 项目展示
 
-![](https://shmily-album.oss-cn-shenzhen.aliyuncs.com/photo_album_9/06e45d780c22b1818f38f35ffe1b9d10.jpg)
+![相册首页](https://shmily-album.oss-cn-shenzhen.aliyuncs.com/photo_album_9/06e45d780c22b1818f38f35ffe1b9d10.jpg)
 
 ![相册列表](https://shmily-album.oss-cn-shenzhen.aliyuncs.com/photo_album_9/f897b405e0b1955aa58f5bd3ef9be31e.png.png)
 
