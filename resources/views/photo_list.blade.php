@@ -30,11 +30,12 @@
                             <a href="{{ url('/photo_detail/'. $key['id']) }}">
                         @elseif($key['album_type'] == 2)
                             <a href="javascript:;" onclick="showModel({{ json_encode($key) }})" >
+
                         @endif
                             <div class="photo-img" data-background="image"
                                  style="background-image: url('{{ $key['album_cover'] }}');"></div>
                             <div class="card-body">
-                                <h5 class="card-title">{{ $key['album_name'] }}</h5>
+                                <h5 class="card-title">{{ $key['album_name'] }} @if($key['album_type'] == 2)<i class="fa fa-lock"></i>@endif</h5>
                                 <p class="card-text">
                                     <small class="text-muted">发布时间：{{ $key['created_at'] }}</small>
                                 </p>
