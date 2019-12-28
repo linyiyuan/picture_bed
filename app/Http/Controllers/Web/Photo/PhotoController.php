@@ -42,7 +42,7 @@ class PhotoController extends CommonController
             $offset = ($cur_page- 1) * $page_size;
             $query = $query->offset($offset)->limit($page_size);
 
-            $list = $query->where('album_status', 1)->get()->toArray();
+            $list = $query->orderBy('album_sort', 'asc')->where('album_status', 1)->get()->toArray();
 
             return view('photo_list', [
                 'list' => $list,
@@ -91,7 +91,7 @@ class PhotoController extends CommonController
 
             $offset = ($cur_page- 1) * $page_size;
             $query = $query->offset($offset)->limit($page_size);
-            $list = $query->orderBy('album_sort', 'asc')->get()->toArray();
+            $list = $query->get()->toArray();
 
             return view('photo_detail', [
                 'list' => $list,
