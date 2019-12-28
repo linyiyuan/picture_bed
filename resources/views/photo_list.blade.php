@@ -29,7 +29,12 @@
                         @if($key['album_type'] == 1)
                             <a href="{{ url('/photo_detail/'. $key['id']) }}">
                         @elseif($key['album_type'] == 2)
-                            <a href="javascript:;" onclick="showModel({{ json_encode($key) }})" >
+                            @if(\Illuminate\Support\Facades\Cookie::get('photo_album_' . $key['id']))
+                                <a href="/photo_detail/{{ $key['id'] }}" >
+                            @else
+                                <a href="javascript:;" onclick="showModel({{ json_encode($key) }})" >
+                            @endif
+
 
                         @endif
                             <div class="photo-img" data-background="image"

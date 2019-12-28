@@ -6,6 +6,8 @@ use App\Http\Controllers\Web\CommonController;
 use App\Http\Utils\PageShow;
 use App\Models\Photo\Photo;
 use App\Models\Photo\PhotoAlbum;
+use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 
 class PhotoController extends CommonController
@@ -62,16 +64,25 @@ class PhotoController extends CommonController
         try {
             if (!intval($id)) return redirect('/photo_list')->with('message',['code' => 400, 'message' => '参数错误']);
 
+            $answer = $this->params['answer'] ?? '';
             $query = Photo::query();
 
             $photoAlbum = PhotoAlbum::query()->where('id', $id)->first();
             if (empty($photoAlbum)) return redirect('/photo_list')->with('message',['code' => 400, 'message' => '该相册不存在']);
 
-            //密码校验
+            //判断是否需要密码校验
             if ($photoAlbum['album_type'] == 2) {
-                $answer = $this->params['answer'] ?? '';
-                if ($answer != $photoAlbum['album_answer']) return redirect('/photo_list')->with('message',['code' => 400, 'message' => '输入密码错误']);
+                if (Cookie::get('photo_album_' . $id)) {
+                    if (!Hash::check($photoAlbum['album_answer'], Cookie::get('photo_album_' . $id))) {
+                        if ($answer != $photoAlbum['album_answer']) return redirect('/photo_list')->with('message',['code' => 400, 'message' => '输入密码错误']);
+                    }
+                }else{
+                    if ($answer != $photoAlbum['album_answer']) return redirect('/photo_list')->with('message',['code' => 400, 'message' => '输入密码错误']);
+                }
             }
+
+            $hashKey = Hash::make($photoAlbum['album_answer']);
+            Cookie::queue('photo_album_' . $id, $hashKey, 60);
 
             $query = $query->where('photo_album', $id);
             $total = $query->count();
