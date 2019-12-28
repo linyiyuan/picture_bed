@@ -6,7 +6,7 @@
     <link rel="icon" type="image/png" href="{{ asset('/assets/img/cosmosplanet.png') }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Shmily的相册
+        Choice→選的相册
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     字体和图标     -->

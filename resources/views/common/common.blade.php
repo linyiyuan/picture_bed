@@ -10,7 +10,7 @@
             <div class="navbar-translate">
                 <a class="navbar-brand" href="/" rel="tooltip" title="Coded by Creative Tim"
                    data-placement="bottom" target="_blank">
-                    Shmily的相册
+                    Choice→選的相册
                 </a>
                 <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
                         aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -108,7 +108,7 @@
                             <font style="vertical-align: inherit;">2019，用</font>
                         </font><i class="fa fa-heart heart"></i>
                         <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;"> 创意蒂姆
+                            <font style="vertical-align: inherit;"> Choice→選
                             </font>
                         </font>
                     </span>
