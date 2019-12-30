@@ -38,7 +38,7 @@ class PhotoController extends CommonController
             $total = $query->count();
 
             $cur_page   = $this->params['cur_page'] ?? 1;
-            $page_size  = 8;
+            $page_size  = 12;
             $offset = ($cur_page- 1) * $page_size;
             $query = $query->offset($offset)->limit($page_size);
 
