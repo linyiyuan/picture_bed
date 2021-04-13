@@ -30,7 +30,7 @@
                         </a>
                     </li>
                     <li class="dropdown nav-item">
-                        <a class="nav-link" href="http://linyiyuan.github.io" target="_blank" >
+                        <a class="nav-link" href="http://www.linyiyuan.top/" target="_blank" >
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">前往博客</font>
                             </font>
